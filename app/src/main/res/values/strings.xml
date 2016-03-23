@@ -1,0 +1,477 @@
+<resources>
+    <string name="app_name">Triedenie Odpadu Košice</string>
+    <string name="menu1Notifikacie">Notifikácie</string>
+    <string name="menu1Informacie">Informácie o triedení odpadu</string>
+    <string name="menu1Mapa">Mapa zberných dvorov</string>
+    <string name="menu2Notifikacie">Notifikácie o triedení</string>
+    <string name="menu2Mesto">Mesto :</string>
+    <string name="menu2MestoKe">Košice</string>
+    <string name="menu2Ulica">Ulica :</string>
+    <string name="menu2Cislo">Popisné číslo :</string>
+    <string name="menu2DobaNotifikacie">Doba Notifikácie :</string>
+    <string name="menu2Dni">(Dní)</string>
+    <string name="menu2Patri">Čo patrí do odpadu</string>
+    <string name="menu2Nepatri">Čo nepatrí do odpadu</string>
+    <string name="menu2Ok">OK</string>
+
+<string-array name="CisloUlic">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    <item>7</item>
+    <item>8</item>
+    <item>9</item>
+    <item>10</item>
+    <item>11</item>
+    <item>12</item>
+    <item>13</item>
+    <item>14</item>
+    <item>15</item>
+    <item>16</item>
+    <item>17</item>
+    <item>18</item>
+    <item>19</item>
+    <item>20</item>
+    <item>21</item>
+    <item>22</item>
+    <item>23</item>
+    <item>24</item>
+    <item>25</item>
+    <item>26</item>
+    <item>27</item>
+    <item>28</item>
+    <item>29</item>
+    <item>30</item>
+    <item>31</item>
+    <item>32</item>
+    <item>33</item>
+    <item>34</item>
+    <item>35</item>
+    <item>36</item>
+    <item>37</item>
+    <item>38</item>
+    <item>39</item>
+    <item>40</item>
+    <item>41</item>
+    <item>42</item>
+    <item>43</item>
+    <item>44</item>
+    <item>45</item>
+    <item>46</item>
+    <item>47</item>
+    <item>48</item>
+    <item>49</item>
+    <item>50</item>
+    <item>51</item>
+    <item>52</item>
+    <item>53</item>
+    <item>54</item>
+    <item>55</item>
+    <item>56</item>
+    <item>57</item>
+    <item>58</item>
+    <item>59</item>
+    <item>60</item>
+    <item>61</item>
+    <item>62</item>
+    <item>63</item>
+    <item>64</item>
+    <item>65</item>
+    <item>66</item>
+    <item>67</item>
+    <item>68</item>
+    <item>69</item>
+    <item>70</item>
+    <item>71</item>
+    <item>72</item>
+    <item>73</item>
+    <item>74</item>
+    <item>75</item>
+    <item>76</item>
+    <item>77</item>
+    <item>78</item>
+    <item>79</item>
+    <item>80</item>
+    <item>81</item>
+    <item>82</item>
+    <item>83</item>
+    <item>84</item>
+    <item>85</item>
+    <item>86</item>
+    <item>87</item>
+    <item>88</item>
+    <item>89</item>
+    <item>90</item>
+    <item>91</item>
+    <item>92</item>
+    <item>93</item>
+    <item>94</item>
+    <item>95</item>
+    <item>96</item>
+    <item>97</item>
+    <item>98</item>
+    <item>99</item>
+</string-array>
+
+    <string-array name="DobaNotifikacie">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+
+    </string-array>
+
+
+
+    <string-array name="UliceKE">
+<item></item>
+        <item>Abovská</item>
+        <item>Adamova</item>
+        <item>Adlerova</item>
+        <item>Agátová</item>
+        <item>Alejová</item>
+        <item>Alešovo nábrežie</item>
+        <item>Alšavská</item>
+        <item>Alvinczyho</item>
+        <item>Alžbetina</item>
+        <item>Americká trieda</item>
+        <item>Amurská</item>
+        <item>Andraščíkova</item>
+        <item>Aničkin park</item>
+        <item>Aténska</item>
+        <item>Atletická</item>
+        <item>Austrálska trieda</item>
+        <item>Ázijská trieda</item>
+        <item>Azovská</item>
+        <item>Bačíkova</item>
+        <item>Bahýľova</item>
+        <item>Bajzova</item>
+        <item>Baltická</item>
+        <item>Banícka</item>
+        <item>Baničova</item>
+        <item>Bankov</item>
+        <item>Barčianska</item>
+        <item>Barčianska</item>
+        <item>Bardejovská</item>
+        <item>Baštová</item>
+        <item>Bašťovanského</item>
+        <item>Bauerova</item>
+        <item>Bazalková</item>
+        <item>Bazová</item>
+        <item>Bažantia</item>
+        <item>Belanská</item>
+        <item>Belehradská</item>
+        <item>Bellova</item>
+        <item>Benadova</item>
+        <item>Bencúrova</item>
+        <item>Benediktínska</item>
+        <item>Beniakova</item>
+        <item>Benkova</item>
+        <item>Berlínska</item>
+        <item>Bernatovská</item>
+        <item>Bernolákova</item>
+        <item>Berzeviczyho</item>
+        <item>Beskydská</item>
+        <item>Betliarska</item>
+        <item>Bezručova</item>
+        <item>Bežecká</item>
+        <item>Biela</item>
+        <item>Bielocerkevská</item>
+        <item>Bielych albatrosov</item>
+        <item>Blatná</item>
+        <item>Blesková</item>
+        <item>Bocatiova</item>
+        <item>Bočiarska</item>
+        <item>Bočná</item>
+        <item>Borievková</item>
+        <item>Borodáčova</item>
+        <item>Borovicová</item>
+        <item>Bosákova</item>
+        <item>Bottova</item>
+        <item>Branisková</item>
+        <item>Bratislavská</item>
+        <item>Brečtanová</item>
+        <item>Brestová</item>
+        <item>Breznianska</item>
+        <item>Brezová</item>
+        <item>Brigádnická</item>
+        <item>Brnenská</item>
+        <item>Brodná</item>
+        <item>Bronzová</item>
+        <item>Bruselská</item>
+        <item>Brusnicová</item>
+        <item>Budanová</item>
+        <item>Budapeštianska</item>
+        <item>Budovateľská</item>
+        <item>Buková</item>
+        <item>Bukovecká</item>
+        <item>Bukureštská</item>
+        <item>Bulharská</item>
+        <item>Buzinská</item>
+        <item>Buzulucká</item>
+        <item>Bystrická</item>
+        <item>Cesta do Hanisky</item>
+        <item>Cesta na Jahodnú</item>
+        <item>Cesta pod Hradovou</item>
+        <item>Cezmínová</item>
+        <item>Cimborkova</item>
+        <item>Cínová</item>
+        <item>Cintorínska</item>
+        <item>Cirbusovej</item>
+        <item>Clementisova</item>
+        <item>Cottbuská</item>
+        <item>Cyklistická</item>
+        <item>Cyprusová</item>
+        <item>Czambelova</item>
+        <item>Čajakova</item>
+        <item>Čajkovského</item>
+        <item>Čapajevova</item>
+        <item>Čárskeho</item>
+        <item>Čechovova</item>
+        <item>Čerešňová</item>
+        <item>Čergovská</item>
+        <item>Čermeľská cesta</item>
+        <item>Čermeľské prielohy</item>
+        <item>Čermeľské údolie</item>
+        <item>Červený breh</item>
+        <item>Červený rak</item>
+        <item>Česká</item>
+        <item>Československého odboja</item>
+        <item>Československej armády</item>
+        <item>Čičky-majer</item>
+        <item>Čiernomorská</item>
+        <item>Čingovská</item>
+        <item>Čínska</item>
+        <item>Čkalovova</item>
+        <item>Člnková</item>
+        <item>Čordákova</item>
+        <item>Dargovská</item>
+        <item>Ďatelinová</item>
+        <item>Dénešova</item>
+        <item>Detvianska</item>
+        <item>Diamantová</item>
+        <item>Dneperská</item>
+        <item>Dobšinského</item>
+        <item>Domčeková</item>
+        <item>Dominikánske námestie</item>
+        <item>Donská</item>
+        <item>Dopravná</item>
+        <item>Drabova</item>
+        <item>Drevný trh</item>
+        <item>Drieňová</item>
+        <item>Drocárov park</item>
+        <item>Drozdia</item>
+        <item>Družicová</item>
+        <item>Družstevná</item>
+        <item>Dubová</item>
+        <item>Dúbravská</item>
+        <item>Dúhová</item>
+        <item>Ďumbierska</item>
+        <item>Dunajská</item>
+        <item>Dvorkinova</item>
+        <item>Edisonova</item>
+        <item>Európska trieda</item>
+        <item>Exnárova</item>
+        <item>Fábryho</item>
+        <item>Fakľová</item>
+        <item>Fándlyho</item>
+        <item>Fatranská</item>
+        <item>Fejova</item>
+        <item>Feketeova pažiť</item>
+        <item>Festivalové námestie</item>
+        <item>Fialková</item>
+        <item>Fibichova</item>
+        <item>Fiľakovská</item>
+        <item>Floriánska</item>
+        <item>Franckova</item>
+        <item>Františkánska</item>
+        <item>Furčianska</item>
+        <item>Gagarinovo námestie</item>
+        <item>Galaktická</item>
+        <item>Galgovecká</item>
+        <item>Garbiarska</item>
+        <item>Gaštanová</item>
+        <item>Gavlovičova</item>
+        <item>Gazdovská</item>
+        <item>Gelnická</item>
+        <item>Gemerská</item>
+        <item>Gerlachovská</item>
+        <item>Goetheho</item>
+        <item>Gogoľova</item>
+        <item>Goldírova</item>
+        <item>Golianova</item>
+        <item>Gorkého</item>
+        <item>Gorovecká</item>
+        <item>Grešákova</item>
+        <item>Gudernova</item>
+        <item>Haburská</item>
+        <item>Hájnická</item>
+        <item>Hanojská</item>
+        <item>Harčarova</item>
+        <item>Harmančeková</item>
+        <item>Harmincova</item>
+        <item>Havanská</item>
+        <item>Haviarska</item>
+        <item>Havlíčkova</item>
+        <item>Hečkova</item>
+        <item>Hellova</item>
+        <item>Helsinská</item>
+        <item>Hemerkova</item>
+        <item>Herlianska</item>
+        <item>Heydukova</item>
+        <item>Hlavná</item>
+        <item>Hlavné námestie</item>
+        <item>Hlinkova</item>
+        <item>Hlohová</item>
+        <item>Hodonínska</item>
+        <item>Hollého</item>
+        <item>Holubyho</item>
+        <item>Horná</item>
+        <item>Hornádska</item>
+        <item>Horolezecká</item>
+        <item>Horovova</item>
+        <item>Hrabová</item>
+        <item>Hradbová</item>
+        <item>Hraničná</item>
+        <item>Hrbová</item>
+        <item>Hrebendova</item>
+        <item>Hrnčiarska</item>
+        <item>Hroncova</item>
+        <item>Hronská</item>
+        <item>Humenská</item>
+        <item>Huncovská</item>
+        <item>Hurbanova</item>
+        <item>Husárska</item>
+        <item>Húskova</item>
+        <item>Hutnícka</item>
+        <item>Hviezdoslavova</item>
+        <item>Hvozdíkov park</item>
+        <item>Chalupkova</item>
+        <item>Charkovská</item>
+        <item>Chmeľníky</item>
+        <item>Chrastie</item>
+        <item>Chrómová</item>
+        <item>Idanská</item>
+        <item>Inžinierska</item>
+        <item>Ipeľská</item>
+        <item>Irkutská</item>
+        <item>Jabloňová</item>
+        <item>Jačmenná</item>
+        <item>Jahodová</item>
+        <item>Jakobyho</item>
+        <item>Jaltská</item>
+        <item>Jána Pavla II</item>
+        <item>Janigova</item>
+        <item>Janitorova</item>
+        <item>Jánošíkova</item>
+        <item>Jantárová</item>
+        <item>Jantárové námestie</item>
+        <item>Jarabinová</item>
+        <item>Jarková</item>
+        <item>Jarmočná</item>
+        <item>Jarná</item>
+        <item>Jaseňová</item>
+        <item>Jasovská</item>
+        <item>Jasuschova</item>
+        <item>Javorová</item>
+        <item>Jazdecká</item>
+        <item>Jazerná</item>
+        <item>Jazmínová</item>
+        <item>Jazvečia</item>
+        <item>Jedlíkova</item>
+        <item>Jedľová</item>
+        <item>Jegorovovo námestie</item>
+        <item>Jelenia</item>
+        <item>Jelšavská</item>
+        <item>Jelšová</item>
+        <item>Jenisejská</item>
+        <item>Jesenná</item>
+        <item>Jesenského</item>
+        <item>Jihlavská</item>
+        <item>Jilemnického</item>
+        <item>Jiskrova</item>
+        <item>Juhoslovanská</item>
+        <item>Junácka</item>
+        <item>Južná trieda</item>
+        <item>Južné nábrežie</item>
+        <item>K ihrisku</item>
+        <item>K lesu</item>
+        <item>K letisku</item>
+        <item>K majeru</item>
+        <item>Kadlubská</item>
+        <item>Kalinčiakova</item>
+        <item>Kalinovská</item>
+        <item>Kameničná</item>
+        <item>Kamenná</item>
+        <item>Kapustná</item>
+        <item>Karlovarská</item>
+        <item>Karpatská</item>
+        <item>Kasárenské námestie</item>
+        <item>Kaspická</item>
+        <item>Kaštieľna</item>
+        <item>Katkin park</item>
+        <item>Kavečianska cesta</item>
+        <item>Keldišova</item>
+        <item>Kertésova</item>
+        <item>Kežmarská</item>
+        <item>Kisdyho</item>
+        <item>Kladenská</item>
+        <item>Klimkovičova</item>
+        <item>Klinčeková</item>
+        <item>Kmeťova</item>
+        <item>Komenského</item>
+        <item>Komenského park</item>
+        <item>Končistá</item>
+        <item>Konopná</item>
+        <item>Konvalinková</item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </string-array>
+
+
+
+
+</resources>
