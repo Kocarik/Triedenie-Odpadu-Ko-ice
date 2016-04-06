@@ -15,6 +15,38 @@
     <string name="menu2Ok">OK</string>
     <string name="oNas">O nás</string>
     <string name="kontaktujteNas">Kontaktujte nás</string>
+    <string name="infoPapier"><b>Čo patrí do kontajnerov na papier:</b>
+        \nčasopisy a noviny
+        \npapierové vrecúška, krabice (ak nie sú kombinované s iným materiálom hliník, celofán)
+        \npapierová lepenka, kartóny...
+        \n\n<b>A čo do kontajnerov nedávať:</b>
+        \nobaly z kombinovaných materiálov (viacvrstvové obaly od trvanlivého mlieka, džúsov)
+        \nzamastený a veľmi znečistený papier
+        \nkopírovací a samoprepisovací celofán
+</string>
+    <string name="infoSklo"><b>Čo patrí do kontajnerov na sklo:</b>
+        \nfľaše, poháre, črepy
+        \núlomky tabuľového skla
+        \n\n<b>A čo do kontajnerov nedávať:</b>
+        \nveľmi  znečistené fľaše a sklenené obaly (najmä pieskom)
+        \nporcelán a keramika
+        \nzrkadlá
+        \nžiarovky a žiarivky
+        \nautosklo
+        \nsklo kombinované s iným materiálom (drôtené sklo)
+</string>
+    <string name="infoPlastKov"><b>Čo patrí do kontajnerov na plasty a kov:</b>
+        \nPET fľaše (minerálky, nealko nápoje…)
+        \nfólie, tašky, igelitové vrecká
+        \nobaly z kozmetických produktov
+        \nplechovky od nápojov, konzervy (bez zvyškov potravín)
+        \ndrobné kovové predmety, drôty
+        \n\n<b>A čo do kontajnerov nedávať:</b>
+        \nobaly z chemikálií
+        \npodlahové krytiny
+        \nvrstvené obaly
+        \npolystyrén
+</string>
 
     <string-array name="CisloUlic">
         <item>1</item>
