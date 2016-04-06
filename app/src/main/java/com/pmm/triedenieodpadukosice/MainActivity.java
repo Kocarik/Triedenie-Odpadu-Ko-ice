@@ -9,10 +9,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
     private Button buttonNotifikacie;
     private Button buttonInformacie;
     private Button buttonMapa;
+    Map mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +25,6 @@ public class MainActivity extends AppCompatActivity {
         buttonNotifikacie=(Button) findViewById(R.id.btnNotifikacie);
         buttonInformacie=(Button) findViewById(R.id.btnInformacie);
         buttonMapa=(Button) findViewById(R.id.btnMapa);
-
-
 
         buttonNotifikacie.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        buttonMapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
