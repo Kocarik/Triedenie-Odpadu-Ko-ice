@@ -47,6 +47,17 @@
         \nvrstvené obaly
         \npolystyrén
 </string>
+    <string name="infoAboutUs">
+        Sme skupina študentov
+    \n študujúcich na akadémii sovy
+
+    </string>
+
+    <string name="infoContactUs">
+        Monika Jaššová - monika.jassova@akademiasovy.sk
+        \nPatrik Patinák - patri.patinak@akademiasovy.sk
+        \nMilos Kočan - milos.kocan@akademiasovy.sk
+    </string>
 
 
     <string-array name="DobaNotifikacie">
@@ -386,6 +397,165 @@
         <item>Končistá</item>
         <item>Konopná</item>
         <item>Konvalinková</item>
+        <item>Námestie Jána Mathého</item>
+        <item>Kopečná</item>
+        <item>Kórejská</item>
+        <item>Korýtková</item>
+        <item>Kosatcová</item>
+        <item>Kostlivého</item>
+        <item>Kostolianska cesta</item>
+        <item>Kostolná</item>
+        <item>Kostrova</item>
+        <item>Košťova</item>
+        <item>Kováčska</item>
+        <item>Kovaľská</item>
+        <item>Kpt. Jaroša</item>
+        <item>Kpt. Nálepku</item>
+        <item>Krajná</item>
+        <item>Krakovská</item>
+        <item>Králičia</item>
+        <item>Krasiňského</item>
+        <item>Krásnohorská</item>
+        <item>Krátka</item>
+        <item>Krčméryho</item>
+        <item>Kremnická</item>
+        <item>Krivá</item>
+        <item>Križinova</item>
+        <item>Krmanova</item>
+        <item>Krompašská</item>
+        <item>Krosnianska</item>
+        <item>Krupinská</item>
+        <item>Ku Bangortu</item>
+        <item>Ku Gardu</item>
+        <item>Ku hájovni</item>
+        <item>Ku mlynu</item>
+        <item>Ku potoku</item>
+        <item>Ku štrkovisku</item>
+        <item>Kubíková</item>
+        <item>Kukučínova</item>
+        <item>Kukuričná</item>
+        <item>Kupeckého</item>
+        <item>Kurská</item>
+        <item>Kustrova</item>
+        <item>Kuzmányho</item>
+        <item>Kvetná</item>
+        <item>Kysucká</item>
+        <item>Laborecká</item>
+        <item>Lackova</item>
+        <item>Ladožská</item>
+        <item>Ľanová</item>
+        <item>Lermontovova</item>
+        <item>Lesná</item>
+        <item>Lesnícka</item>
+        <item>Letecká</item>
+        <item>Letná</item>
+        <item>Letná Staré mesto</item>
+        <item>Levanduľová</item>
+        <item>Levická</item>
+        <item>Levočská</item>
+        <item>Lidické námestie</item>
+        <item>Liesková</item>
+        <item>Lichardova</item>
+        <item>Lipová</item>
+        <item>Liptovská</item>
+        <item>Löfflerova</item>
+        <item>Lomená</item>
+        <item>Lomnická</item>
+        <item>Lomonosovova</item>
+        <item>Londýnska</item>
+        <item>Lorinčík</item>
+        <item>Lovecká</item>
+        <item>Lubina</item>
+        <item>Lučenecká</item>
+        <item>Lúčna</item>
+        <item>Ludmanská</item>
+        <item>Ľudová</item>
+        <item>Ludvíkov dvor</item>
+        <item>Lupkovská</item>
+        <item>Lyžiarska</item>
+        <item>Macákova</item>
+        <item>Maďarská</item>
+        <item>Madridská</item>
+        <item>Magdalénska</item>
+        <item>Magnezitárska</item>
+        <item>Magnezitárska -Obec Ťahanovce</item>
+        <item>Magurská</item>
+        <item>Májová</item>
+        <item>Malá</item>
+        <item>Malinová</item>
+        <item>Maloidanská</item>
+        <item>Mánesova</item>
+        <item>Markušova</item>
+        <item>Maršala Koneva</item>
+        <item>Martinská</item>
+        <item>Masarykova</item>
+        <item>Maša</item>
+        <item>Matičná</item>
+        <item>Matuškova</item>
+        <item>Maurerova</item>
+        <item>Mäsiarska</item>
+        <item>Medená</item>
+        <item>Medzevská</item>
+        <item>Medzi mostami</item>
+        <item>Mengusovská</item>
+        <item>Mestský park</item>
+        <item>Meškova</item>
+        <item>Meteorová</item>
+        <item>Mierová</item>
+        <item>Michalovská</item>
+        <item>Mikovíniho</item>
+        <item>Milosrdenstva</item>
+        <item>Minská</item>
+        <item>Miškovecká</item>
+        <item>Mládežnícka</item>
+        <item>Mliečna</item>
+        <item>Mlynárska</item>
+        <item>Mlynská</item>
+        <item>Močiarna</item>
+        <item>Modranská</item>
+        <item>Mojmírova</item>
+        <item>Moldavská cesta</item>
+        <item>Mongolská</item>
+        <item>Moravská</item>
+        <item>Mosadzná</item>
+        <item>Moskovská trieda-KVP</item>
+        <item>Moskovská trieda-Západ</item>
+        <item>Moyzesova</item>
+        <item>Mozartova</item>
+        <item>Mudroňova</item>
+        <item>Muránska</item>
+        <item>Murgašova</item>
+        <item>Muškátová</item>
+        <item>Myslavská</item>
+        <item>Na banisegu</item>
+        <item>Na Brehu</item>
+        <item>Na Demetri-Sídlisko ťahanovce</item>
+        <item>Na Demetri- Ťahanovce obec</item>
+        <item>Na doline</item>
+        <item>Na hájiku</item>
+        <item>Na hore</item>
+        <item>Na Horke</item>
+        <item>Na Kalvárii</item>
+        <item>Na Kope I</item>
+        <item>Na Kope II</item>
+        <item>Na Kope III</item>
+        <item>Na Kope IV</item>
+        <item>Na Kope V</item>
+        <item>Na Kope VI</item>
+        <item>Na Kope VII</item>
+        <item>Na Kope VIII</item>
+        <item>Na Kope X</item>
+        <item>Na Košarisku</item>
+        <item>Na močidlách</item>
+        <item>Na pažiti</item>
+        <item>Na Rožku</item>
+        <item>Na sihoti</item>
+        <item>Na stráni</item>
+        <item>Na šajbe</item>
+        <item>Na záhumní</item>
+        <item>Nábrežná</item>
+        <item>Nad Belogradom</item>
+        <item>Nad záhradami</item>
 
 
     </string-array>

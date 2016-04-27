@@ -1,5 +1,7 @@
 package com.pmm.triedenieodpadukosice;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -63,9 +65,15 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.About_Us_id:
-                break;
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.mainActivityLayout, new AboutUsFragment())
+                        .addToBackStack("")
+                        .commit();
             case R.id.Contact_us_id:
-                break;
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.mainActivityLayout, new ContactUsFragment())
+                        .addToBackStack("")
+                        .commit();
         }
         return super.onOptionsItemSelected(item);
     }
