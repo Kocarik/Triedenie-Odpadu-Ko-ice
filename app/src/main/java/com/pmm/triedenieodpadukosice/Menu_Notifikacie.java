@@ -40,7 +40,7 @@ public class Menu_Notifikacie extends AppCompatActivity {
         SharedPreferences settings;
         int value;
         settings = getPreferences(Context.MODE_PRIVATE);
-        value = settings.getInt("doba", 0);
+        value = settings.getInt("doba", 1);
         return value;
     }
 
@@ -59,9 +59,8 @@ public class Menu_Notifikacie extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position != 0) {
                     Toast.makeText(getBaseContext(), parent.getItemAtPosition(position) + " vybrané", Toast.LENGTH_SHORT).show();
-                    ulica=parent.getItemAtPosition(position).toString();
+                    ulica = parent.getItemAtPosition(position).toString();
                 }
-
             }
 
             @Override
@@ -82,6 +81,9 @@ public class Menu_Notifikacie extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), parent.getItemAtPosition(position) + " vybrané", Toast.LENGTH_SHORT).show();
                     dobaNotifikacie=Integer.valueOf(parent.getItemAtPosition(position).toString());
                 }
+                else{
+                    dobaNotifikacie=1;
+                }
             }
 
             @Override
@@ -101,7 +103,8 @@ public class Menu_Notifikacie extends AppCompatActivity {
                 editor.putString("ulica", ulica);
                 editor.putInt("doba", dobaNotifikacie);
                 editor.apply();
-                Toast.makeText(getBaseContext(), getUlica()+getDobaNotifikacie(), Toast.LENGTH_SHORT).show();
+                System.out.println(getUlica()+ " " + getDobaNotifikacie());
+                Toast.makeText(getBaseContext(), "Nastavenia boli uložené", Toast.LENGTH_SHORT).show();
             }
         });
     }
