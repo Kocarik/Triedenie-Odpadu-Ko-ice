@@ -1,5 +1,7 @@
 package com.pmm.triedenieodpadukosice;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -8,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -17,9 +20,29 @@ import android.widget.Toast;
 public class Menu_Notifikacie extends AppCompatActivity {
     Spinner spinnerUlice;
     Spinner spinnerDobaNotifikacie;
+    Button btnOK;
 
     ArrayAdapter<CharSequence> adapter;
     ArrayAdapter<CharSequence> adapterNotifikacie;
+
+    private String ulica;
+    private int dobaNotifikacie;
+
+    public String getUlica() {
+        SharedPreferences settings;
+        String text;
+        settings = getPreferences(Context.MODE_PRIVATE);
+        text = settings.getString("ulica", null);
+        return text;
+    }
+
+    public int getDobaNotifikacie(){
+        SharedPreferences settings;
+        int value;
+        settings = getPreferences(Context.MODE_PRIVATE);
+        value = settings.getInt("doba", 0);
+        return value;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +57,9 @@ public class Menu_Notifikacie extends AppCompatActivity {
         spinnerUlice.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position !=0){
+                if (position != 0) {
                     Toast.makeText(getBaseContext(), parent.getItemAtPosition(position) + " vybrané", Toast.LENGTH_SHORT).show();
+                    ulica=parent.getItemAtPosition(position).toString();
                 }
 
             }
@@ -54,14 +78,30 @@ public class Menu_Notifikacie extends AppCompatActivity {
         spinnerDobaNotifikacie.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position !=0) {
+                if (position != 0) {
                     Toast.makeText(getBaseContext(), parent.getItemAtPosition(position) + " vybrané", Toast.LENGTH_SHORT).show();
+                    dobaNotifikacie=Integer.valueOf(parent.getItemAtPosition(position).toString());
                 }
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+        });
+
+        btnOK=(Button) findViewById(R.id.btnMenu2Ok);
+        btnOK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.clear();
+                editor.commit();
+                editor.putString("ulica", ulica);
+                editor.putInt("doba", dobaNotifikacie);
+                editor.apply();
+                Toast.makeText(getBaseContext(), getUlica()+getDobaNotifikacie(), Toast.LENGTH_SHORT).show();
             }
         });
     }
