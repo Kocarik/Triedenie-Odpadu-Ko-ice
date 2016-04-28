@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.Calendar;
+
 /**
  * Created by Bubo on 22. 3. 2016.
  */
@@ -48,7 +50,16 @@ public class Menu_Notifikacie extends AppCompatActivity {
         return value;
     }
 
-    public void setNotif(){
+    public void setAlarm(){
+        Calendar cal = Calendar.getInstance();
+        //mesiac od 0
+        cal.set(Calendar.MONTH,3);
+        cal.set(Calendar.YEAR,2016);
+        cal.set(Calendar.DAY_OF_MONTH,28);
+        cal.set(Calendar.HOUR_OF_DAY,23);
+        cal.set(Calendar.MINUTE,8);
+        cal.set(Calendar.SECOND,0);
+
         AlarmManager alarms = (AlarmManager)this.getSystemService(Context.ALARM_SERVICE);
 
         Receiver receiver = new Receiver();
@@ -56,13 +67,13 @@ public class Menu_Notifikacie extends AppCompatActivity {
         registerReceiver(receiver, filter);
 
         Intent intent = new Intent("ALARM_ACTION");
-        intent.putExtra("param1", 1);
-        intent.putExtra("param2", "sklo");
-        //intent.putExtra("param", "My scheduled action");
+        intent.putExtra("paramdni", 1);
+        intent.putExtra("paramodpad", "sklo");
+  
         PendingIntent operation = PendingIntent.getBroadcast(this, 0, intent, 0);
         // I choose 3s after the launch of my application
-        alarms.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 3000, operation) ;
-
+        //alarms.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 3000, operation) ;
+        alarms.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), operation) ;
     }
 
     @Override
@@ -134,13 +145,13 @@ public class Menu_Notifikacie extends AppCompatActivity {
                 SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPref.edit();
                 editor.clear();
-                editor.commit();
+                editor.apply();
                 editor.putString("ulica", ulica);
                 editor.putInt("doba", dobaNotifikacie);
                 editor.apply();
                 //System.out.println(getUlica() + " " + getDobaNotifikacie());
                 Toast.makeText(getBaseContext(), getString(R.string.settingsSaved), Toast.LENGTH_SHORT).show();
-                setNotif();
+                setAlarm();
             }
         });
     }
