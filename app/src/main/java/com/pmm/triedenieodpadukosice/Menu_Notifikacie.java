@@ -1,6 +1,10 @@
 package com.pmm.triedenieodpadukosice;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -44,10 +48,41 @@ public class Menu_Notifikacie extends AppCompatActivity {
         return value;
     }
 
+    public void setNotif(){
+        AlarmManager alarms = (AlarmManager)this.getSystemService(Context.ALARM_SERVICE);
+
+        Receiver receiver = new Receiver();
+        IntentFilter filter = new IntentFilter("ALARM_ACTION");
+        registerReceiver(receiver, filter);
+
+        Intent intent = new Intent("ALARM_ACTION");
+        intent.putExtra("param1", 1);
+        intent.putExtra("param2", getUlica());
+        intent.putExtra("param", "My scheduled action");
+        PendingIntent operation = PendingIntent.getBroadcast(this, 0, intent, 0);
+        // I choose 3s after the launch of my application
+        alarms.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 3000, operation) ;
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_notifikacie);
+
+        /*database=new Database();
+        Odvoz nextOdvoz=database.getNextOdvoz();
+        Date datum=nextOdvoz.getDatum();
+        int typ=nextOdvoz.getTyp();
+        int den=
+        String odpad;
+        switch(typ){
+            case 0: odpad="sklo"; break;
+            case 1: odpad="plast + kov"; break;
+            case 2: odpad="papier"; break;
+            default: odpad="odpad";
+        }*/
+        int den;
 
         spinnerUlice=(Spinner)findViewById(R.id.spinnerUlice);
         adapter=ArrayAdapter.createFromResource(this,R.array.UliceKE,android.R.layout.simple_spinner_item);
@@ -103,8 +138,9 @@ public class Menu_Notifikacie extends AppCompatActivity {
                 editor.putString("ulica", ulica);
                 editor.putInt("doba", dobaNotifikacie);
                 editor.apply();
-                System.out.println(getUlica()+ " " + getDobaNotifikacie());
-                Toast.makeText(getBaseContext(), "Nastavenia boli uložené", Toast.LENGTH_SHORT).show();
+                //System.out.println(getUlica() + " " + getDobaNotifikacie());
+                Toast.makeText(getBaseContext(), getString(R.string.settingsSaved), Toast.LENGTH_SHORT).show();
+                setNotif();
             }
         });
     }

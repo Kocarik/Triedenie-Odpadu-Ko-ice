@@ -13,6 +13,8 @@
     <string name="menu2Patri">Čo patrí do odpadu</string>
     <string name="menu2Nepatri">Čo nepatrí do odpadu</string>
     <string name="menu2Ok">OK</string>
+    <string name="settingsSaved">Nastavenia boli uložené</string>
+    <string name="notif_scroll_text">Upozornenie na blížiaci sa odvoz separovaného odpadu.</string>
     <string name="oNas">O nás</string>
     <string name="kontaktujteNas">Kontaktujte nás</string>
     <string name="infoPapier"><b>Čo patrí do kontajnerov na papier:</b>
