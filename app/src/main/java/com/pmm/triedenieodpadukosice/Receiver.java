@@ -18,75 +18,36 @@ public class Receiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        //int dni=Integer.valueOf(intent.getStringExtra("param2"));
+        int dni=intent.getIntExtra("param1", 1);
+
         String textNotifikacie;
-        /*if (dni==1){
-            textNotifikacie="O "+intent.getStringExtra("param2")+" deň sa bude odvážať "+intent.getStringExtra("param");
+        if (dni==1){
+            textNotifikacie="O "+dni+" deň sa bude odvážať "+intent.getStringExtra("param2");
         }
         else if (dni>1 && dni<5){
-            textNotifikacie="O "+intent.getStringExtra("param2")+" dni sa bude odvážať "+intent.getStringExtra("param");
+            textNotifikacie="O "+dni+" dni sa bude odvážať "+intent.getStringExtra("param2");
         }
         else{
-            textNotifikacie="O "+intent.getStringExtra("param2")+" dní sa bude odvážať "+intent.getStringExtra("param");
-        }*/
-        Toast.makeText(context, intent.getStringExtra("param"), Toast.LENGTH_SHORT).show();
+            textNotifikacie="O "+dni+" dní sa bude odvážať "+intent.getStringExtra("param2");
+        }
+        String scrollingText=context.getString(R.string.notif_scroll_text);
 
-        /*    textNotifikacie="O "+intent.getStringExtra("param2")+" dni sa bude odvážať "+intent.getStringExtra("param");
-        String scrollingText=context.getString(R.string.notif_scroll_text);*/
-
-        /*NotificationManager mNM;
-        mNM = (NotificationManager)context.getSystemService(context.NOTIFICATION_SERVICE);
-
-        // Set the icon, scrolling text and timestamp
-        Notification notification = new Notification(R.drawable.icon, textNotifikacie, System.currentTimeMillis());
-
-        // The PendingIntent to launch our activity if the user selects this notification
-        PendingIntent contentIntent = PendingIntent.getActivity(context, 0, new Intent(context, Menu_Informacie.class), 0);
-
-        // Set the info for the views that show in the notification panel.
-        notification.setLatestEventInfo(context, context.getText(R.string.alarm_service_label), textNotifikacie, contentIntent);
-
-        // Send the notification.
-        // We use a layout id because it is a unique number. We use it later to cancel.
-        mNM.notify(R.string.alarm_service_label, notification);*/
-
-        /*     int NOTIFICATION = 123;
-        // Name of an intent extra we can use to identify if this service was started to create a notification
-        String INTENT_NOTIFY = "com.blundell.tut.service.INTENT_NOTIFY";
-        // The system notification manager
-        NotificationManager mNM;
-        mNM = (NotificationManager) context.getSystemService(context.NOTIFICATION_SERVICE);
-
-         /*  // This is the 'title' of the notification
-            CharSequence title = context.getString(R.string.notif_scroll_text);
-            // This is the icon to use on the notification
-            int icon = R.drawable.ic_notif;
-            // This is the scrolling text of the notification
-            CharSequence text = textNotifikacie;
-            // What time to show on the notification
-            long time = System.currentTimeMillis();
-
-            Notification notification = new Notification(icon, text, time);
-
-            // The PendingIntent to launch our activity if the user selects this notification
-            PendingIntent contentIntent = PendingIntent.getActivity(context, 0, new Intent(context, Menu_Informacie.class), 0);
-
-            // Set the info for the views that show in the notification panel.
-            notification.setLatestEventInfo(this, title, text, contentIntent);
-
-            // Clear the notification when it is pressed
-            notification.flags |= Notification.FLAG_AUTO_CANCEL;
-
-            // Send the notification to the system.
-            mNM.notify(NOTIFICATION, notification);*/
-
-        /*    Notification noti = new Notification.Builder(context)
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context)
+                .setSmallIcon(R.drawable.ic_notif)
+                .setAutoCancel(true)
+                .setTicker(scrollingText)
                 .setContentTitle(scrollingText)
-                .setContentText(textNotifikacie)
-                .setSmallIcon(R.drawable.recycle)
-                .build();
-                //.setLargeIcon(R.drawable.recycle)
-                //.build();*/
+                .setContentText(textNotifikacie);
+
+        Intent resultIntent = new Intent(context, Menu_Informacie.class);
+        PendingIntent resultPendingIntent = PendingIntent.getActivity(context, 0, resultIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+        mBuilder.setContentIntent(resultPendingIntent);
+
+        NotificationManager mNotifyMgr =
+                (NotificationManager) context.getSystemService(context.NOTIFICATION_SERVICE);
+        int mNotificationId = 001;
+        mNotifyMgr.notify(mNotificationId, mBuilder.build());
 
     }
 }

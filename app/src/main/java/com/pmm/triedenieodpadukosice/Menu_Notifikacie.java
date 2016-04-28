@@ -57,8 +57,8 @@ public class Menu_Notifikacie extends AppCompatActivity {
 
         Intent intent = new Intent("ALARM_ACTION");
         intent.putExtra("param1", 1);
-        intent.putExtra("param2", getUlica());
-        intent.putExtra("param", "My scheduled action");
+        intent.putExtra("param2", "sklo");
+        //intent.putExtra("param", "My scheduled action");
         PendingIntent operation = PendingIntent.getBroadcast(this, 0, intent, 0);
         // I choose 3s after the launch of my application
         alarms.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 3000, operation) ;
