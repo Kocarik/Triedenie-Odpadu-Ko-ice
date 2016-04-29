@@ -7,9 +7,10 @@ import java.sql.Date;
  */
 public class Odvoz {
     private int typ;
-    private Date datum;
+    //private Date datum;
+    private String datum;
 
-    public Odvoz(int typ, Date datum) {
+    public Odvoz(int typ, String datum) {
         this.typ = typ;
         this.datum = datum;
     }
@@ -18,7 +19,7 @@ public class Odvoz {
         return typ;
     }
 
-    public Date getDatum() {
+    public String getDatum() {
         return datum;
     }
 }

@@ -28,9 +28,9 @@ public class Menu_Notifikacie extends AppCompatActivity {
     private String ulica;
     private int dobaNotifikacie;
 
-    public final int HODINA=7;
-    public final int MINUTA=00;
-    public final int SEKUNDA=0;
+    public static final int HODINA=7;
+    public static final int MINUTA=00;
+    public static final int SEKUNDA=0;
 
     public String getUlica() {
         SharedPreferences settings;
@@ -50,34 +50,31 @@ public class Menu_Notifikacie extends AppCompatActivity {
 
     public void setAlarm(){
         new Alarm().setAlarm2Notify(this, 2016, 3, 29, 9, 11, 0, 1, "sklo");
-        /*java.util.Date datum = new java.util.Date(nextOdvoz.getDatum().getTime());
-        java.util.Date utilDate = new java.util.Date(sqlDate.getTime());
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(datum);
-        int year = cal.get(Calendar.YEAR);
-        int month = cal.get(Calendar.MONTH);
-        int day = cal.get(Calendar.DAY_OF_MONTH);
-        new Alarm().setAlarm2Notify(this, year, month, day, HODINA, MINUTA, SEKUNDA, getDobaNotifikacie(), nextOdvoz.getTyp());*/
+
+        DatabaseHelper db=new DatabaseHelper(this);
+        Odvoz nextOdvoz=db.getNextOdvoz(getUlica());
+        int typ=nextOdvoz.getTyp();
+        String odpad;
+        switch(typ){
+            case 0: odpad="papier"; break;
+            case 1: odpad="sklo"; break;
+            case 2: odpad="plast + kov"; break;
+            default: odpad="odpad";
+        }
+
+        String datum=nextOdvoz.getDatum();
+        String[] tokens=datum.split("-");
+        int year = Integer.valueOf(tokens[0]);
+        int month = Integer.valueOf(tokens[1]);
+        int day = Integer.valueOf(tokens[2]);
+
+        new Alarm().setAlarm2Notify(this, year, month, day-getDobaNotifikacie(), HODINA, MINUTA, SEKUNDA, getDobaNotifikacie(), odpad);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_notifikacie);
-
-        /*database=new Database();
-        Odvoz nextOdvoz=database.getNextOdvoz();
-        Date datum=nextOdvoz.getDatum();
-        int typ=nextOdvoz.getTyp();
-        int den=
-        String odpad;
-        switch(typ){
-            case 0: odpad="sklo"; break;
-            case 1: odpad="plast + kov"; break;
-            case 2: odpad="papier"; break;
-            default: odpad="odpad";
-        }*/
-        int den;
 
         spinnerUlice=(Spinner)findViewById(R.id.spinnerUlice);
         adapter=ArrayAdapter.createFromResource(this,R.array.UliceKE,android.R.layout.simple_spinner_item);
