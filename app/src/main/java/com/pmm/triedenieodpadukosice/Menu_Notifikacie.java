@@ -51,13 +51,14 @@ public class Menu_Notifikacie extends AppCompatActivity {
     }
 
     public void setAlarm(){
-        Calendar cal = Calendar.getInstance();
+        new Alarm().setAlarm2Notify(this, 2016, 3, 29, 9, 11, 0, 1, "sklo");
+        /*Calendar cal = Calendar.getInstance();
         //mesiac od 0
         cal.set(Calendar.MONTH,3);
         cal.set(Calendar.YEAR,2016);
-        cal.set(Calendar.DAY_OF_MONTH,28);
-        cal.set(Calendar.HOUR_OF_DAY,23);
-        cal.set(Calendar.MINUTE,8);
+        cal.set(Calendar.DAY_OF_MONTH,29);
+        cal.set(Calendar.HOUR_OF_DAY,8);
+        cal.set(Calendar.MINUTE,07);
         cal.set(Calendar.SECOND,0);
 
         AlarmManager alarms = (AlarmManager)this.getSystemService(Context.ALARM_SERVICE);
@@ -73,7 +74,7 @@ public class Menu_Notifikacie extends AppCompatActivity {
         PendingIntent operation = PendingIntent.getBroadcast(this, 0, intent, 0);
         // I choose 3s after the launch of my application
         //alarms.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 3000, operation) ;
-        alarms.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), operation) ;
+        alarms.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), operation) ;*/
     }
 
     @Override
