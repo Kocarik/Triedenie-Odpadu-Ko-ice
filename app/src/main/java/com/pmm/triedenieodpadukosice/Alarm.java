@@ -15,13 +15,22 @@ public class Alarm {
 
     public void setAlarm2Notify(Context context, int year, int month, int day, int hour, int minute, int second, int dni, String odpad){
         Calendar cal = Calendar.getInstance();
-        //mesiac od 0
+
         cal.set(Calendar.MONTH, month);
         cal.set(Calendar.YEAR, year);
         cal.set(Calendar.DAY_OF_MONTH, day);
         cal.set(Calendar.HOUR_OF_DAY, hour);
         cal.set(Calendar.MINUTE, minute);
         cal.set(Calendar.SECOND, second);
+        /*
+        //mesiac od 0
+        cal.set(Calendar.MONTH,3);
+        cal.set(Calendar.YEAR,2016);
+        cal.set(Calendar.DAY_OF_MONTH,29);
+        cal.set(Calendar.HOUR_OF_DAY,8);
+        cal.set(Calendar.MINUTE,07);
+        cal.set(Calendar.SECOND,0);
+         */
 
         AlarmManager alarms = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
 

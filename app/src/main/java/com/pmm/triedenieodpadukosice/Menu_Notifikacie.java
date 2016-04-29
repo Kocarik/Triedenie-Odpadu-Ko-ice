@@ -1,10 +1,6 @@
 package com.pmm.triedenieodpadukosice;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,8 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import java.util.Calendar;
 
 /**
  * Created by Bubo on 22. 3. 2016.
@@ -33,6 +27,10 @@ public class Menu_Notifikacie extends AppCompatActivity {
 
     private String ulica;
     private int dobaNotifikacie;
+
+    public final int HODINA=7;
+    public final int MINUTA=00;
+    public final int SEKUNDA=0;
 
     public String getUlica() {
         SharedPreferences settings;
@@ -52,29 +50,14 @@ public class Menu_Notifikacie extends AppCompatActivity {
 
     public void setAlarm(){
         new Alarm().setAlarm2Notify(this, 2016, 3, 29, 9, 11, 0, 1, "sklo");
-        /*Calendar cal = Calendar.getInstance();
-        //mesiac od 0
-        cal.set(Calendar.MONTH,3);
-        cal.set(Calendar.YEAR,2016);
-        cal.set(Calendar.DAY_OF_MONTH,29);
-        cal.set(Calendar.HOUR_OF_DAY,8);
-        cal.set(Calendar.MINUTE,07);
-        cal.set(Calendar.SECOND,0);
-
-        AlarmManager alarms = (AlarmManager)this.getSystemService(Context.ALARM_SERVICE);
-
-        Receiver receiver = new Receiver();
-        IntentFilter filter = new IntentFilter("ALARM_ACTION");
-        registerReceiver(receiver, filter);
-
-        Intent intent = new Intent("ALARM_ACTION");
-        intent.putExtra("paramdni", 1);
-        intent.putExtra("paramodpad", "sklo");
-  
-        PendingIntent operation = PendingIntent.getBroadcast(this, 0, intent, 0);
-        // I choose 3s after the launch of my application
-        //alarms.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 3000, operation) ;
-        alarms.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), operation) ;*/
+        /*java.util.Date datum = new java.util.Date(nextOdvoz.getDatum().getTime());
+        java.util.Date utilDate = new java.util.Date(sqlDate.getTime());
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(datum);
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+        new Alarm().setAlarm2Notify(this, year, month, day, HODINA, MINUTA, SEKUNDA, getDobaNotifikacie(), nextOdvoz.getTyp());*/
     }
 
     @Override

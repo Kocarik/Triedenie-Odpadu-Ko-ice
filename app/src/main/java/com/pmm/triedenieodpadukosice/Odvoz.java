@@ -1,15 +1,15 @@
 package com.pmm.triedenieodpadukosice;
 
-import java.sql.Timestamp;
+import java.sql.Date;
 
 /**
  * Created by Client on 28.4.2016.
  */
 public class Odvoz {
     private int typ;
-    private Timestamp datum;
+    private Date datum;
 
-    public Odvoz(int typ, Timestamp datum) {
+    public Odvoz(int typ, Date datum) {
         this.typ = typ;
         this.datum = datum;
     }
@@ -18,7 +18,7 @@ public class Odvoz {
         return typ;
     }
 
-    public Timestamp getDatum() {
+    public Date getDatum() {
         return datum;
     }
 }
