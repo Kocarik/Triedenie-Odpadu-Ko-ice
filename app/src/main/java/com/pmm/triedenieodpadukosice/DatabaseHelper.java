@@ -29,16 +29,59 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table" + TABLE_MC + "(ulica text, mc text, primary key(ulica)");
         db.execSQL("create table"+ TABLE_GROUPS +"(mc text, ido integer, foreign key(mc) references "+TABLE_MC+"(mc))");
-        db.execSQL("create table"+ TABLE_DATES +"(id integer auto_increment, datum text, ido integer, odpad integer, " +
-                "primary key(id), foreign key(ido) references "+TABLE_GROUPS+"(ido))");
+        db.execSQL("create table" + TABLE_DATES + "(id integer auto_increment, datum text, ido integer, odpad integer, " +
+                "primary key(id), foreign key(ido) references " + TABLE_GROUPS + "(ido))");
         //db.execSQL("create table"+TABLE_NAME+"(ID INTEGER  PRIMARY KEY AUTOINCREMENT)");
-        insertObvod("KVP", 1);
+
+        insertObvody();
+        insertUlice();
+        insertTerminy();
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP IF TABLE EXISTS "+TABLE_NAME);
+        db.execSQL("DROP IF TABLE EXISTS " + TABLE_NAME);
         onCreate(db);
+    }
+
+    public void insertTerminy(){
+        insertTermin(2, 1, "2016-05-04");
+        insertTermin(2, 2, "2016-05-05");
+        insertTermin(2, 3, "2016-05-06");
+        insertTermin(0, 1, "2016-05-11");
+        insertTermin(0, 2, "2016-05-12");
+        insertTermin(0, 3, "2016-05-13");
+        insertTermin(1, 1, "2016-05-18");
+        insertTermin(1, 2, "2016-05-19");
+        insertTermin(1, 3, "2016-05-20");
+    }
+
+    public void insertUlice(){
+        insertUlica("Abovská", "Barca");
+        insertUlica("Adamova", "Krásna");
+        insertUlica("Agátová", "Košická Nová Ves");
+        insertUlica("Alešovo nábrežie", "Sever");
+
+    }
+
+    public void insertObvody(){
+        insertObvod("Juh", 1);
+        insertObvod("Barca", 1);
+        insertObvod("Šebastovce", 1);
+        insertObvod("Krásna", 1);
+        insertObvod("Vyšné Opátske", 1);
+        insertObvod("Myslava", 2);
+        insertObvod("Pereš", 2);
+        insertObvod("Lorinčík", 2);
+        insertObvod("Poľov", 2);
+        insertObvod("Šaca", 2);
+        insertObvod("Ľudvíkov Dvor", 2);
+        insertObvod("Západ", 2);
+        insertObvod("Kavečany", 2);
+        insertObvod("Ťahanovce - obec", 2);
+        insertObvod("Sever", 3);
+        insertObvod("Džungľa", 3);
+        insertObvod("Košická Nová Ves", 3);
     }
 
     public boolean insertUlica (String ulica, String mc) {
@@ -51,6 +94,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public boolean insertObvod (String mc, int ido) {
+        /*
+        1, 2, 3
+         */
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("mc", mc);
@@ -59,6 +105,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public boolean insertTermin (int odpad, int ido, String datum) {
+        /*
+        papier 0
+        sklo 1
+        plast+kov 2
+         */
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("odpad", odpad);
