@@ -13,7 +13,7 @@ import java.util.Calendar;
  */
 public class Alarm {
 
-    public void setAlarm2Notify(Context context, int year, int month, int day, int hour, int minute, int second, int dni, String odpad){
+    public void setAlarmDateTime(Context context, int year, int month, int day, int hour, int minute, int second, int dni, String odpad){
         Calendar cal = Calendar.getInstance();
 
         cal.set(Calendar.MONTH, month);
@@ -43,9 +43,9 @@ public class Alarm {
         intent.putExtra("paramodpad", odpad);
 
         PendingIntent operation = PendingIntent.getBroadcast(context, 0, intent, 0);
-        // I choose 3s after the launch of my application
-        //alarms.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 3000, operation) ;
-        alarms.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), operation) ;
+
+        alarms.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 3000, operation) ;
+        //alarms.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), operation) ;
     }
 
 

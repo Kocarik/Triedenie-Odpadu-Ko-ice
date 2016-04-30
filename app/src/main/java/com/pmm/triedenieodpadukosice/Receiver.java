@@ -46,5 +46,6 @@ public class Receiver extends BroadcastReceiver {
         int mNotificationId = 1;
         mNotifyMgr.notify(mNotificationId, mBuilder.build());
 
+        //new Menu_Notifikacie().setAlarm();
     }
 }

@@ -124,7 +124,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res =  db.rawQuery("select datum, odpad from Terminy INNER JOIN Obvody ON Terminy.ido=Obvody.ido " +
                 "INNER JOIN MestskeCasti ON Obvody.mc=MestskeCasti.mc " +
-                "WHERE MestskeCasti.ulica LIKE '"+ulica+"' AND datum > (SELECT date('now')) ORDER BY datum LIMIT 1", null );
+                "WHERE MestskeCasti.ulica LIKE '"+ulica+"' AND date(datum) > date('now') ORDER BY date(datum) ASC LIMIT 1", null );
         res.moveToFirst();
 
         while(res.isAfterLast() == false){

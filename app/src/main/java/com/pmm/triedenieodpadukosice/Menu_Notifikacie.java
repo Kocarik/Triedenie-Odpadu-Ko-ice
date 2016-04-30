@@ -49,9 +49,9 @@ public class Menu_Notifikacie extends AppCompatActivity {
     }
 
     public void setAlarm(){
-        new Alarm().setAlarm2Notify(this, 2016, 3, 29, 9, 11, 0, 1, "sklo");
+        new Alarm().setAlarmDateTime(this, 2016, 3, 29, 9, 11, 0, 1, "sklo");
 
-        DatabaseHelper db=new DatabaseHelper(this);
+        /*DatabaseHelper db=new DatabaseHelper(this);
         Odvoz nextOdvoz=db.getNextOdvoz(getUlica());
         int typ=nextOdvoz.getTyp();
         String odpad;
@@ -68,7 +68,7 @@ public class Menu_Notifikacie extends AppCompatActivity {
         int month = Integer.valueOf(tokens[1]);
         int day = Integer.valueOf(tokens[2]);
 
-        new Alarm().setAlarm2Notify(this, year, month, day-getDobaNotifikacie(), HODINA, MINUTA, SEKUNDA, getDobaNotifikacie(), odpad);
+        new Alarm().setAlarmDateTime(this, year, month-1, day - getDobaNotifikacie(), HODINA, MINUTA, SEKUNDA, getDobaNotifikacie(), odpad);*/
     }
 
     @Override
