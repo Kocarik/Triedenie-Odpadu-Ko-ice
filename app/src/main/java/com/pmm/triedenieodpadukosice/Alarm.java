@@ -13,6 +13,33 @@ import java.util.Calendar;
  */
 public class Alarm {
 
+    public static final int HODINA=7;
+    public static final int MINUTA=00;
+    public static final int SEKUNDA=0;
+
+    public void setAlarm(Context context, int doba, String ulica){
+        //new Alarm().setAlarmDateTime(this, 2016, 3, 29, 9, 11, 0, 1, "sklo");
+
+        DatabaseHelper db=new DatabaseHelper(context);
+        Odvoz nextOdvoz=db.getNextOdvoz(ulica);
+        int typ=nextOdvoz.getTyp();
+        String odpad;
+        switch(typ){
+            case 0: odpad="papier"; break;
+            case 1: odpad="sklo"; break;
+            case 2: odpad="plast + kov"; break;
+            default: odpad="odpad";
+        }
+
+        String datum=nextOdvoz.getDatum();
+        String[] tokens=datum.split("-");
+        int year = Integer.valueOf(tokens[0]);
+        int month = Integer.valueOf(tokens[1]);
+        int day = Integer.valueOf(tokens[2]);
+
+        setAlarmDateTime(context, year, month-1, day - doba, HODINA, MINUTA, SEKUNDA, doba, odpad);
+    }
+
     public void setAlarmDateTime(Context context, int year, int month, int day, int hour, int minute, int second, int dni, String odpad){
         Calendar cal = Calendar.getInstance();
 

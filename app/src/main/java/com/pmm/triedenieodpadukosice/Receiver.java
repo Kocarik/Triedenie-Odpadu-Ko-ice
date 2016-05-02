@@ -5,6 +5,8 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 
 /**
@@ -46,6 +48,11 @@ public class Receiver extends BroadcastReceiver {
         int mNotificationId = 1;
         mNotifyMgr.notify(mNotificationId, mBuilder.build());
 
-        //new Menu_Notifikacie().setAlarm();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        int storedDoba = prefs.getInt("doba", 1);
+        String storedUlica = prefs.getString("ulica", null);
+        System.out.println(storedUlica+" "+storedDoba);
+        new Alarm().setAlarm(context, storedDoba, storedUlica);
+
     }
 }
