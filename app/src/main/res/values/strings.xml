@@ -17,6 +17,14 @@
     <string name="notif_scroll_text">Upozornenie na blížiaci sa odvoz separovaného odpadu.</string>
     <string name="oNas">O nás</string>
     <string name="kontaktujteNas">Kontaktujte nás</string>
+    <string name="fivethings">5 Things about Kosice</string>
+    <string name="fivethings_text"><b>5 Things about Kosice</b>
+        \n\n1. Košice is the second largest city of Slovakia
+        \n2. It has population of 240 000
+        \n3. In 2013 it was the European Capital of Culture
+        \n4. The city has the largest number of protected historical monuments in Slovakia
+        \n5. The oldest annual marathon in Europe, Košice Peace Marathon was founded in 1924.
+    </string>
     <string name="infoPapier"><b>Čo patrí do kontajnerov na papier:</b>
         \nčasopisy a noviny
         \npapierové vrecúška, krabice (ak nie sú kombinované s iným materiálom hliník, celofán)

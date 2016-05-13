@@ -26,7 +26,7 @@ public class Menu_Notifikacie extends AppCompatActivity {
     ArrayAdapter<CharSequence> adapter;
     ArrayAdapter<CharSequence> adapterNotifikacie;
 
-    SharedPrefs sp;
+    //SharedPrefs sp;
 
     private String ulica;
     private int dobaNotifikacie;
@@ -56,7 +56,7 @@ public class Menu_Notifikacie extends AppCompatActivity {
         adapter=ArrayAdapter.createFromResource(this,R.array.UliceKE,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerUlice.setAdapter(adapter);
-        sp=new SharedPrefs();
+        //sp=new SharedPrefs();
 
         spinnerUlice.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -129,6 +129,8 @@ public class Menu_Notifikacie extends AppCompatActivity {
             case R.id.About_Us_id:
                 break;
             case R.id.Contact_us_id:
+                break;
+            case R.id.Fivethings_id:
                 break;
         }
         return super.onOptionsItemSelected(item);

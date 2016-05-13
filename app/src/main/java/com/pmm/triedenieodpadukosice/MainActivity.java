@@ -74,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
                         .replace(R.id.mainActivityLayout, new ContactUsFragment())
                         .addToBackStack("")
                         .commit();
+            case R.id.Fivethings_id:
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.mainActivityLayout, new FiveThingsFragment())
+                        .addToBackStack("")
+                        .commit();
         }
         return super.onOptionsItemSelected(item);
     }

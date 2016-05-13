@@ -11,4 +11,8 @@ tools:context=".MainActivity">
     android:title="@string/kontaktujteNas">
     </item>
 
+    <item android:id="@+id/Fivethings_id"
+        android:title="@string/fivethings">
+    </item>
+
 </menu>
