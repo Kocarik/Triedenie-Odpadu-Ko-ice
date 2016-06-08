@@ -38,6 +38,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.getUiSettings().setZoomControlsEnabled(true);
         LatLng latlng1 = new LatLng(48.734132, 21.283426); //Lidické nám.16 - Kosice
         LatLng latLng2 = new LatLng(48.702963, 21.254920); //Krakovska 4 - Kosice
         LatLng latLng3 = new LatLng(48.715944, 21.218213); //Wuppertálska 21 - Kosice
