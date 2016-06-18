@@ -17,69 +17,59 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageView"
             android:src="@drawable/logo"
-            android:layout_alignParentTop="true"
+            android:contentDescription="@string/triedenie_odpadu_kosice_logo"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginBottom="320dp" />
-        <LinearLayout
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/relativeLayout" />
+        <RelativeLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="150dp">
+            android:id="@+id/relativeLayout">
 
             <Button
+                android:theme="@style/MyButton"
                 android:id="@+id/btnNotifikacie"
-
                 android:text="@string/menu1Notifikacie"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp"
-
+                android:textSize="28sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#9C9C9C"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="5"
                 android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp" />
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp" />
 
             <Button
+                android:theme="@style/MyButton"
                 android:id="@+id/btnInformacie"
                 android:text="@string/menu1Informacie"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp"
+                android:textSize="28sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#9C9C9C"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="5"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp" />
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp" />
 
             <Button
+                android:theme="@style/MyButton"
                 android:id="@+id/btnMapa"
                 android:text="@string/menu1Mapa"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp"
+                android:textSize="28sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#9C9C9C"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="5"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp" />
-        </LinearLayout>
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
 
 
     </RelativeLayout>
