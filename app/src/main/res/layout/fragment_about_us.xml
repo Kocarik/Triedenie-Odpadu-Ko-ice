@@ -12,6 +12,6 @@
         android:layout_height="match_parent"
         android:text="@string/infoAboutUs"
         android:background="#ffffff"
-        android:layout_gravity="center" />
+        android:layout_gravity="left|center_vertical" />
 
 </FrameLayout>

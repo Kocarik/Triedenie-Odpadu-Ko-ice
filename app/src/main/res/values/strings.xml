@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Triedenie Odpadu Košice</string>
+    <string name="app_title_notifikacie">Notifikácie o triedení odpadu</string>
+    <string name="app_title_infootriedeni">Informácie o triedení odpadu</string>
+    <string name="app_title_mapazbdvorov">Mapa zberných dvorov</string>
     <string name="menu1Notifikacie">Notifikácie o triedení odpadu</string>
     <string name="menu1Informacie">Informácie o triedení odpadu</string>
     <string name="menu1Mapa">Mapa zberných dvorov</string>
