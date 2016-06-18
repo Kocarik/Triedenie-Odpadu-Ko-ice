@@ -52,7 +52,7 @@ public class Receiver extends BroadcastReceiver {
         int storedDoba = prefs.getInt("doba", 1);
         String storedUlica = prefs.getString("ulica", null);
         System.out.println(storedUlica+" "+storedDoba);
-        new Alarm().setAlarm(context, storedDoba, storedUlica);
+        //new Alarm().setAlarm(context, storedDoba, storedUlica);
 
     }
 }

@@ -109,7 +109,8 @@ public class Menu_Notifikacie extends AppCompatActivity {
                 editor.putInt("doba", dobaNotifikacie);
                 editor.apply();
                 Toast.makeText(getBaseContext(), getString(R.string.settingsSaved), Toast.LENGTH_SHORT).show();
-                new Alarm().setAlarm(getApplicationContext(), getDobaNotifikacie(), getUlica());
+                //new Alarm().setAlarm(getApplicationContext(), getDobaNotifikacie(), getUlica());
+                new Alarm().setAlarm3sec(getApplicationContext());
             }
         });
     }

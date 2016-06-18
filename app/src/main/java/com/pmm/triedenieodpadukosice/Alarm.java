@@ -75,5 +75,21 @@ public class Alarm {
         //alarms.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), operation) ;
     }
 
+    public void setAlarm3sec(Context context){
+        AlarmManager alarms = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+
+        Receiver receiver = new Receiver();
+        IntentFilter filter = new IntentFilter("ALARM_ACTION");
+        context.registerReceiver(receiver, filter);
+
+        Intent intent = new Intent("ALARM_ACTION");
+        intent.putExtra("paramdni", 1);
+        intent.putExtra("paramodpad", "sklo");
+
+        PendingIntent operation = PendingIntent.getBroadcast(context, 0, intent, 0);
+
+        alarms.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 3000, operation);
+    }
+
 
 }
