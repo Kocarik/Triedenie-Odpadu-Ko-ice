@@ -9,13 +9,13 @@
     <string name="menu2Notifikacie">Notifikácie o triedení</string>
     <string name="menu2Mesto">Mesto :</string>
     <string name="menu2MestoKe">Košice</string>
-    <string name="menu2Ulica">Ulica :</string>
-    <string name="menu2Cislo">Popisné číslo :</string>
-    <string name="menu2DobaNotifikacie">Doba Notifikácie :</string>
+    <string name="menu2Ulica">ULICA</string>
+    <string name="menu2Cislo">POPISNÉ ČÍSLO</string>
+    <string name="menu2DobaNotifikacie">DOBA NOTIFIKÁCIE</string>
     <string name="menu2Dni">(Dní)</string>
     <string name="menu2Patri">Čo patrí do odpadu</string>
     <string name="menu2Nepatri">Čo nepatrí do odpadu</string>
-    <string name="menu2Ok">OK</string>
+    <string name="menu2Ok">NASTAVIŤ NOTIFIKÁCIU</string>
     <string name="settingsSaved">Nastavenia boli uložené</string>
     <string name="notif_scroll_text">Upozornenie na blížiaci sa odvoz separovaného odpadu.</string>
     <string name="oNas">O nás</string>
@@ -74,6 +74,7 @@
 
 
     <string-array name="DobaNotifikacie">
+        <item>Vyberte počet dní</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -110,7 +111,7 @@
 
 
     <string-array name="UliceKE">
-        <item></item>
+        <item>Prosím vyberte ulicu</item>
         <item>Abovská</item>
         <item>Adamova</item>
         <item>Adlerova</item>
@@ -577,6 +578,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Map</string>
     <string name="triedenie_odpadu_kosice_logo">Triedenie Odpadu Kosice Logo</string>
+    <string name="placeHolder_popisCislo">Zadajte popisné číslo</string>
 
 
 </resources>
