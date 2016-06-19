@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.Map;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonInformacie;
     private Button buttonMapa;
     Map mMap;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,20 +70,29 @@ public class MainActivity extends AppCompatActivity {
             case R.id.About_Us_id:
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.mainActivityLayout, new AboutUsFragment())
-                        .addToBackStack("")
+                        .addToBackStack("MainActivity")
                         .commit();
+
+                return true;
+
             case R.id.Contact_us_id:
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.mainActivityLayout, new ContactUsFragment())
-                        .addToBackStack("")
+                        .addToBackStack("MainActivity")
                         .commit();
+
+                return true;
             case R.id.Fivethings_id:
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.mainActivityLayout, new FiveThingsFragment())
-                        .addToBackStack("")
+                        .addToBackStack("MainActivity")
                         .commit();
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
+
     }
 
 }
